@@ -13,7 +13,8 @@
   --bg:#ffffff;
   --bg-warm:#faf7f1;
   --maxw:1120px;
-  --serif:"Songti TC","STSong","LiSong Pro","Source Han Serif TC",serif;
+  /* 標題與品牌用較重的黑體，乾淨現代、不呆板 */
+  --serif:"PingFang TC","Apple LiGothic Medium","Microsoft JhengHei",sans-serif;
   --sans:"PingFang TC","Apple LiGothic Medium","Microsoft JhengHei",sans-serif;
 }
 *{box-sizing:border-box}
@@ -25,7 +26,7 @@ body{
 img{max-width:100%;display:block}
 a{color:var(--blue-2);text-decoration:none}
 a:hover{color:var(--gold)}
-h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.4;color:var(--blue-ink);letter-spacing:.02em}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.45;color:var(--blue-ink);letter-spacing:.04em}
 
 /* 法號尊稱：上/下 小字偏上 */
 .hon{font-size:.6em;vertical-align:.42em;margin:0 .02em;color:inherit;font-family:var(--serif)}
