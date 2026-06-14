@@ -3,6 +3,7 @@
   --blue:#16386a;        /* 法船天空藍 */
   --blue-2:#27598f;
   --blue-ink:#0f2746;
+  --head:#1f56a0;        /* 標題用較亮的法船藍 */
   --gold:#b3842f;        /* 寺院金 */
   --gold-soft:#caa961;
   --pink:#d98bb0;        /* 蓮花粉 */
@@ -26,7 +27,7 @@ body{
 img{max-width:100%;display:block}
 a{color:var(--blue-2);text-decoration:none}
 a:hover{color:var(--gold)}
-h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.45;color:var(--blue-ink);letter-spacing:.04em}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.45;color:var(--head);letter-spacing:.04em}
 
 /* 法號尊稱：上/下 小字偏上 */
 .hon{font-size:.6em;vertical-align:.42em;margin:0 .02em;color:inherit;font-family:var(--serif)}
@@ -75,15 +76,17 @@ section{padding:68px 0}
 section.warm{background:var(--bg-warm)}
 .eyebrow{display:block;text-align:center;color:var(--gold);letter-spacing:.42em;
   font-size:.8rem;margin-bottom:10px;font-weight:600}
-.sec-title{text-align:center;font-size:clamp(1.7rem,3.6vw,2.5rem);margin:0 0 .7em}
+.sec-title{text-align:center;font-size:clamp(1.7rem,3.6vw,2.5rem);margin:0 0 .85em}
+.sec-title::after{content:"";display:block;width:54px;height:3px;margin:.5em auto 0;
+  background:linear-gradient(90deg,var(--gold-soft),var(--gold));border-radius:3px}
 .lotus-rule{width:100%;max-width:220px;margin:0 auto 40px;height:22px;
   background:no-repeat center/contain;opacity:.9}
 .prose{max-width:760px;margin:0 auto}
 .prose p{margin:0 0 1.3em;color:#3a352e}
-.prose h3{font-size:1.4rem;margin:1.8em 0 .6em;color:var(--blue);
+.prose h3{font-size:1.4rem;margin:1.8em 0 .6em;color:var(--head);
   padding-left:14px;border-left:4px solid var(--gold-soft)}
 .center{text-align:center}
-.lead-quote{font-family:var(--serif);font-size:1.5rem;line-height:2;color:var(--blue);
+.lead-quote{font-family:var(--serif);font-size:1.5rem;line-height:2;color:var(--head);
   text-align:center;max-width:760px;margin:0 auto 1.6em;letter-spacing:.04em}
 
 /* ---- 簡介雙欄 ---- */
