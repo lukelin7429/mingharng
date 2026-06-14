@@ -1,0 +1,192 @@
+/* ===== 明航寺 mingharng.org ===== */
+:root{
+  --blue:#16386a;        /* 法船天空藍 */
+  --blue-2:#27598f;
+  --blue-ink:#0f2746;
+  --gold:#b3842f;        /* 寺院金 */
+  --gold-soft:#caa961;
+  --pink:#d98bb0;        /* 蓮花粉 */
+  --pink-soft:#f3dde8;
+  --ink:#2b2722;
+  --ink-soft:#5c554c;
+  --line:#e7e0d4;
+  --bg:#ffffff;
+  --bg-warm:#faf7f1;
+  --maxw:1120px;
+  --serif:"Songti TC","STSong","LiSong Pro","Source Han Serif TC",serif;
+  --sans:"PingFang TC","Apple LiGothic Medium","Microsoft JhengHei",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:var(--sans);color:var(--ink);background:var(--bg);
+  font-size:19px;line-height:1.95;-webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:var(--blue-2);text-decoration:none}
+a:hover{color:var(--gold)}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.4;color:var(--blue-ink);letter-spacing:.02em}
+
+/* 法號尊稱：上/下 小字偏上 */
+.hon{font-size:.6em;vertical-align:.42em;margin:0 .02em;color:inherit;font-family:var(--serif)}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+/* ---- 導覽列 ---- */
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);
+  backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:var(--maxw);margin:0 auto;padding:10px 24px;display:flex;align-items:center;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;color:var(--blue-ink)}
+.brand img{width:46px;height:46px;border-radius:50%}
+.brand b{font-family:var(--serif);font-size:1.45rem;letter-spacing:.08em;color:var(--blue-ink)}
+.brand span{display:block;font-size:.66rem;letter-spacing:.34em;color:var(--gold);margin-top:2px}
+.nav-links{margin-left:auto;display:flex;gap:6px;align-items:center}
+.nav-links a{padding:9px 16px;border-radius:999px;color:var(--ink-soft);font-size:1.02rem;transition:.2s}
+.nav-links a:hover{background:var(--bg-warm);color:var(--blue-ink)}
+.nav-links a.active{color:var(--blue-ink);background:var(--pink-soft)}
+.nav-toggle{display:none;margin-left:auto;background:none;border:1px solid var(--line);
+  border-radius:8px;padding:8px 11px;font-size:1.2rem;cursor:pointer;color:var(--blue-ink)}
+
+/* ---- Hero（首頁） ---- */
+.hero{position:relative;min-height:78vh;display:flex;align-items:flex-end;
+  background:#0c1f3a center/cover no-repeat;color:#fff}
+.hero::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(8,20,40,.82) 0%,rgba(8,20,40,.25) 42%,rgba(8,20,40,.05) 100%)}
+.hero-in{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;width:100%;padding:0 24px 64px}
+.hero h1{color:#fff;font-size:clamp(2.6rem,6vw,4.4rem);margin:0 0 .2em;letter-spacing:.14em;
+  text-shadow:0 2px 18px rgba(0,0,0,.45)}
+.hero .lead{font-size:clamp(1.05rem,2.4vw,1.5rem);letter-spacing:.18em;color:#f4ead2;
+  text-shadow:0 1px 10px rgba(0,0,0,.5);margin:0}
+.hero .verse{margin-top:18px;font-family:var(--serif);font-size:clamp(1rem,2.2vw,1.3rem);
+  color:#fff;opacity:.92;letter-spacing:.1em}
+
+/* ---- 內頁 banner ---- */
+.banner{position:relative;height:38vh;min-height:260px;display:flex;align-items:flex-end;
+  background:#0c1f3a center/cover no-repeat;color:#fff}
+.banner::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(8,20,40,.75),rgba(8,20,40,.05) 70%)}
+.banner-in{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;width:100%;padding:0 24px 34px}
+.banner h1{color:#fff;font-size:clamp(2rem,5vw,3.2rem);margin:0;letter-spacing:.12em;text-shadow:0 2px 16px rgba(0,0,0,.5)}
+.banner p{color:#f4ead2;letter-spacing:.16em;margin:.4em 0 0;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+
+/* ---- 區段 ---- */
+section{padding:68px 0}
+section.warm{background:var(--bg-warm)}
+.eyebrow{display:block;text-align:center;color:var(--gold);letter-spacing:.42em;
+  font-size:.8rem;margin-bottom:10px;font-weight:600}
+.sec-title{text-align:center;font-size:clamp(1.7rem,3.6vw,2.5rem);margin:0 0 .7em}
+.lotus-rule{width:100%;max-width:220px;margin:0 auto 40px;height:22px;
+  background:no-repeat center/contain;opacity:.9}
+.prose{max-width:760px;margin:0 auto}
+.prose p{margin:0 0 1.3em;color:#3a352e}
+.prose h3{font-size:1.4rem;margin:1.8em 0 .6em;color:var(--blue);
+  padding-left:14px;border-left:4px solid var(--gold-soft)}
+.center{text-align:center}
+.lead-quote{font-family:var(--serif);font-size:1.5rem;line-height:2;color:var(--blue);
+  text-align:center;max-width:760px;margin:0 auto 1.6em;letter-spacing:.04em}
+
+/* ---- 簡介雙欄 ---- */
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;max-width:var(--maxw)}
+.split img{border-radius:10px;box-shadow:0 14px 40px rgba(20,40,80,.16)}
+
+/* ---- 畫廊 ---- */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:var(--maxw)}
+.gallery a{display:block;overflow:hidden;border-radius:8px;aspect-ratio:4/3;background:#eee}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.gallery a:hover img{transform:scale(1.07)}
+.gallery .tall{grid-row:span 2;aspect-ratio:auto}
+
+/* ---- 卡片 ---- */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:var(--maxw)}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:30px 26px;
+  text-align:center;transition:.25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(20,40,80,.12);border-color:var(--gold-soft)}
+.card .ic{font-size:2rem;margin-bottom:8px}
+.card h3{margin:.2em 0 .4em;font-size:1.3rem}
+.card p{color:var(--ink-soft);font-size:.98rem;margin:0}
+
+/* ---- 住持 ---- */
+.abbot{display:grid;grid-template-columns:380px 1fr;gap:44px;align-items:start;
+  max-width:920px;margin:0 auto 64px}
+.abbot.rev{grid-template-columns:1fr 380px}
+.abbot.rev .portrait{order:2}
+.portrait{border-radius:12px;overflow:hidden;box-shadow:0 16px 44px rgba(20,40,80,.18);background:#eee}
+.portrait img{width:100%;display:block}
+.abbot-body h2{font-size:1.9rem;margin:.1em 0 .1em}
+.abbot-role{display:inline-block;background:var(--pink-soft);color:#9c4a72;
+  padding:4px 14px;border-radius:999px;font-size:.82rem;letter-spacing:.18em;margin-bottom:14px;font-family:var(--sans)}
+.abbot-role.late{background:#eef1f5;color:#516079}
+.abbot-body p{color:#3a352e;margin:0 0 1.1em}
+
+.lineage{max-width:760px;margin:0 auto;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.lineage h3{background:var(--bg-warm);margin:0;padding:16px 24px;font-size:1.2rem;border-bottom:1px solid var(--line)}
+.lineage table{width:100%;border-collapse:collapse;font-size:1rem}
+.lineage td{padding:14px 24px;border-bottom:1px solid var(--line)}
+.lineage tr:last-child td{border-bottom:none}
+.lineage td:first-child{color:var(--gold);font-family:var(--serif);white-space:nowrap;width:96px}
+.lineage td b{font-size:1.1rem;color:var(--blue-ink)}
+
+/* ---- 法會表 ---- */
+.sched-meta{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;margin-bottom:36px;color:var(--ink-soft)}
+.sched-meta b{color:var(--blue);font-family:var(--serif)}
+.table-wrap{max-width:920px;margin:0 auto;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(20,40,80,.06)}
+table.sched{width:100%;border-collapse:collapse;font-size:1.02rem}
+table.sched thead th{background:var(--blue);color:#fff;font-family:var(--serif);font-weight:500;
+  padding:15px 18px;text-align:left;letter-spacing:.08em;font-size:1rem}
+table.sched td{padding:15px 18px;border-bottom:1px solid var(--line)}
+table.sched tbody tr:nth-child(even){background:var(--bg-warm)}
+table.sched tbody tr.is-next{background:#fbf3e0}
+table.sched tbody tr:last-child td{border-bottom:none}
+.no{color:var(--gold);font-family:var(--serif);font-weight:600}
+.dharma{font-weight:600;color:var(--blue-ink)}
+.lunar{color:var(--ink-soft);font-size:.94rem}
+.badge{display:inline-block;padding:4px 13px;border-radius:999px;font-size:.82rem;letter-spacing:.06em;white-space:nowrap}
+.badge.done{background:#eef0f3;color:#7d8694}
+.badge.up{background:var(--gold);color:#fff}
+.badge.now{background:#c0392b;color:#fff}
+.sched-note{max-width:920px;margin:22px auto 0;color:var(--ink-soft);font-size:.92rem;text-align:center}
+
+/* ---- 頁尾 ---- */
+footer{background:var(--blue-ink);color:#cdd7e6;padding:60px 0 30px;font-size:.98rem}
+.foot-grid{max-width:var(--maxw);margin:0 auto;padding:0 24px;display:grid;
+  grid-template-columns:1.3fr 1fr;gap:40px}
+footer h4{font-family:var(--serif);color:#fff;font-size:1.3rem;margin:0 0 16px;letter-spacing:.1em}
+footer .foot-brand{display:flex;gap:14px;align-items:center;margin-bottom:18px}
+footer .foot-brand img{width:54px;height:54px;border-radius:50%}
+footer .foot-brand b{font-family:var(--serif);font-size:1.5rem;color:#fff;letter-spacing:.1em}
+footer p{margin:.3em 0;color:#aab8cc}
+footer .contact div{margin-bottom:7px}
+footer .contact .k{color:var(--gold-soft);display:inline-block;min-width:5.4em;letter-spacing:.1em}
+footer a{color:#e3d4a8}
+footer a:hover{color:#fff}
+.foot-bottom{max-width:var(--maxw);margin:36px auto 0;padding:20px 24px 0;border-top:1px solid rgba(255,255,255,.14);
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;color:#8194ac;font-size:.86rem}
+
+/* ---- 燈箱 ---- */
+.lb{position:fixed;inset:0;background:rgba(8,14,26,.93);display:none;align-items:center;justify-content:center;z-index:100;padding:24px}
+.lb.open{display:flex}
+.lb img{max-width:94vw;max-height:90vh;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.lb button{position:absolute;top:20px;right:26px;background:none;border:none;color:#fff;font-size:2.4rem;cursor:pointer;line-height:1}
+
+/* ---- 揭示動畫 ---- */
+.rvl{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.rvl.in{opacity:1;transform:none}
+
+/* ---- 響應式 ---- */
+@media(max-width:860px){
+  body{font-size:18px}
+  .nav-links{position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);
+    flex-direction:column;gap:0;padding:8px 16px 16px;display:none}
+  .nav-links.open{display:flex}
+  .nav-links a{width:100%;padding:13px 12px;border-radius:8px}
+  .nav-toggle{display:block}
+  .split{grid-template-columns:1fr;gap:28px}
+  .split img{order:-1}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  .cards{grid-template-columns:1fr}
+  .abbot,.abbot.rev{grid-template-columns:1fr;gap:22px;max-width:460px}
+  .abbot.rev .portrait{order:-1}
+  .foot-grid{grid-template-columns:1fr;gap:26px}
+  table.sched .hide-sm{display:none}
+  .sched-meta{gap:16px}
+}
