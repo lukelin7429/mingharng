@@ -208,6 +208,18 @@ footer a:hover{color:#fff}
 .gallery.in a:nth-child(12){animation-delay:.81s}
 @keyframes tileUp{to{opacity:1;transform:none}}
 
+/* ---- 刊物頁 ---- */
+.prd-sub{text-align:center;color:var(--ink-soft);margin:-1em 0 2.2em;font-size:1rem;letter-spacing:.06em}
+.prd-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;max-width:var(--maxw);margin:0 auto}
+.prd-card{border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#fff;transition:transform .25s,box-shadow .25s,border-color .25s}
+.prd-card:hover{transform:translateY(-5px);box-shadow:0 14px 36px rgba(20,40,80,.13);border-color:var(--gold-soft)}
+.prd-card>a{display:block;color:inherit;text-decoration:none}
+.prd-card img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;background:var(--bg-warm)}
+.prd-info{padding:10px 12px 13px;text-align:center}
+.prd-date{font-size:.84rem;color:var(--ink-soft);margin-bottom:7px}
+.prd-dl{display:block;background:var(--blue);color:#fff;border-radius:999px;padding:6px 10px;font-size:.78rem;letter-spacing:.04em;transition:background .2s}
+.prd-card:hover .prd-dl{background:var(--gold)}
+
 /* 尊重減少動態偏好 */
 @media(prefers-reduced-motion:reduce){
   .hero-bg{animation:none}
@@ -236,4 +248,8 @@ footer a:hover{color:#fff}
   .foot-grid{grid-template-columns:1fr;gap:26px}
   table.sched .hide-sm{display:none}
   .sched-meta{gap:16px}
+  .prd-grid{grid-template-columns:repeat(3,1fr);gap:12px}
+}
+@media(max-width:520px){
+  .prd-grid{grid-template-columns:repeat(2,1fr);gap:10px}
 }
